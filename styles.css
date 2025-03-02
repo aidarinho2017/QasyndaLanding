@@ -1,0 +1,320 @@
+/* 🌑 Цветовая схема */
+:root {
+    --black: #121212;
+    --white: #ffffff;
+    --red: #b22222;
+    --dark-gray: #1a1a1a;
+    --light-gray: #cccccc;
+}
+
+/* 📌 Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* 🔝 Навигация */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: var(--dark-gray);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--red);
+}
+
+/* 🌍 Кнопки переключения языка */
+.lang-switch {
+    display: flex;
+    gap: 10px;
+}
+
+.lang-switch button {
+    background: transparent;
+    border: 2px solid var(--red);
+    color: var(--white);
+    padding: 8px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: background 0.3s, color 0.3s;
+}
+
+.lang-switch button:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* Активный язык */
+.lang-switch button.active {
+    background: var(--red);
+    color: var(--white);
+}
+
+/* 🎭 Главный экран */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+.cta {
+    background: var(--red);
+    padding: 12px 20px;
+    border: none;
+    color: var(--white);
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.cta:hover {
+    background: #8b0000;
+    transform: scale(1.1);
+}
+
+/* ℹ️ Блок "О нас" */
+.about {
+    text-align: center;
+    padding: 100px 50px;
+    background: var(--dark-gray);
+}
+
+.about h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+/* 🏆 Таблица преимуществ с анимацией */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-card {
+    background: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Активный класс для анимации */
+.about-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-card h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 16px;
+    color: var(--white);
+}
+
+/* 🛠 Виды подработки */
+.jobs {
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.jobs h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+/* 📜 Интерактивный список */
+.job-list {
+    list-style: none;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.job-item {
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 5px;
+    background: var(--dark-gray);
+    transition: transform 0.3s ease, background 0.3s ease;
+    cursor: pointer;
+}
+
+.job-item:hover {
+    transform: scale(1.05);
+    background: var(--red);
+}
+
+/* 🎭 Основатели */
+.team {
+    text-align: center;
+    padding: 100px 50px;
+    background: var(--dark-gray);
+}
+
+.team h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-member {
+    background: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    color: var(--red);
+    margin-bottom: 5px;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+/* 📞 Контакты */
+.contact {
+    text-align: center;
+    padding: 100px 50px;
+}
+
+.contact h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 20px;
+}
+
+.contact p {
+    font-size: 18px;
+    color: var(--white);
+}
+
+.contact a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.contact a:hover {
+    color: var(--red);
+}
+
+/* 🦶 Футер */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: var(--dark-gray);
+    margin-top: 50px;
+}
+
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .about, .jobs, .team, .contact {
+        padding: 60px 20px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+}
