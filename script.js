@@ -22,6 +22,26 @@ document.addEventListener("DOMContentLoaded", function () {
             "ru": "Найди подработку быстро и легко!",
             "en": "Find a job quickly and easily!"
         },
+        "main": {
+            "ru": "Главная",
+            "en": "Main"
+        },
+        "we": {
+            "ru": "О нас",
+            "en": "About us"
+        },
+        "jobs": {
+            "ru": "Виды подработок",
+            "en": "Job types"
+        },
+        "team": {
+            "ru": "Команда",
+            "en": "Team"
+        },
+        "contacts": {
+            "ru": "Контакты",
+            "en": "Contacts"
+        },
         "hero-desc": {
             "ru": "Мы поможем тебе найти подработку по твоим навыкам и свободному времени. Оставь заявку и начни зарабатывать уже сегодня!",
             "en": "We will help you find a part-time job based on your skills and free time. Apply now and start earning today!"

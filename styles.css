@@ -3,7 +3,7 @@
     --black: #121212;
     --white: #ffffff;
     --red: #b22222;
-    --dark-gray: #1a1a1a;
+    --dark-gray: #1b0f0f;
     --light-gray: #cccccc;
 }
 
@@ -249,6 +249,79 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-section h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+/* 📑 Презентация */
+.presentation-section {
+    text-align: center;
+    padding: 100px 50px;
+    background: var(--dark-gray);
+}
+
+.presentation-section h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+.presentation-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Match your design */
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: var(--black);
+}
+
+.presentation-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+    .presentation-section {
+        padding: 80px 20px;
+    }
+
+    .presentation-container {
+        max-width: 100%;
+    }
+}
+
+
+
+
 /* 📞 Контакты */
 .contact {
     text-align: center;
@@ -288,12 +361,16 @@ footer {
 /* 📱 Адаптивность */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 
+    nav {
+        display: none;
+    }
+
+
     nav ul {
-        flex-direction: column;
         gap: 10px;
         margin-top: 10px;
     }
