@@ -3,7 +3,11 @@
     --black: #121212;
     --white: #ffffff;
     --red: #b22222;
+<<<<<<< HEAD
     --dark-gray: #1a1a1a;
+=======
+    --dark-gray: #1b0f0f;
+>>>>>>> 3a6452e (Обновление раздела Новости)
     --light-gray: #cccccc;
 }
 
@@ -134,6 +138,174 @@ nav ul li a:hover {
     margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
+=======
+
+/*  Новости */
+#news {
+    padding: 80px 20px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Заголовки */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+.subsection-title {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--red);  /* Красный оттенок для выделения */
+}
+
+/* Стиль для блока успехов */
+.news-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 30px;
+    background-color: #333;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-text {
+    padding-right: 20px;
+}
+
+.news-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.news-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--light-gray);
+    margin-bottom: 20px;
+}
+
+.news-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.news-image {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.news-image:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для цифровых мероприятий */
+.digital-events {
+    margin-top: 50px;
+    background-color: var(--black);  /* Фон черный */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.subsection-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--white);  /* Белый текст для заголовка */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;  /* Добавим немного промежутка между буквами */
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px; /* Увеличиваем расстояние между событиями на одной строке */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.event {
+    background-color: var(--dark-gray); /* Черный цвет карточек */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.event-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.event-description {
+    font-size: 16px;
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.event-image {
+    width: 60%;  /* Уменьшаем фотографии */
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: none; /* Статичные фото */
+}
+
+/* Увеличим расстояние между первой и второй строкой */
+.events-grid + .events-grid {
+    margin-top: 60px;  /* Увеличиваем промежуток между строками */
+}
+
+/* Финальное сообщение */
+.final-message {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    margin-top: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-image {
+        width: 80%;
+    }
+}
+
+
+>>>>>>> 3a6452e (Обновление раздела Новости)
 /* 🏆 Таблица преимуществ с анимацией */
 .about-grid {
     display: grid;
@@ -249,6 +421,79 @@ nav ul li a:hover {
     transform: scale(1.05);
 }
 
+<<<<<<< HEAD
+=======
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-section h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+/* 📑 Презентация */
+.presentation-section {
+    text-align: center;
+    padding: 100px 50px;
+    background: var(--dark-gray);
+}
+
+.presentation-section h2 {
+    font-size: 36px;
+    color: var(--red);
+    margin-bottom: 30px;
+}
+
+.presentation-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 800px; /* Match your design */
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: var(--black);
+}
+
+.presentation-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* 📱 Адаптивность */
+@media (max-width: 768px) {
+    .presentation-section {
+        padding: 80px 20px;
+    }
+
+    .presentation-container {
+        max-width: 100%;
+    }
+}
+
+>>>>>>> 3a6452e (Обновление раздела Новости)
 /* 📞 Контакты */
 .contact {
     text-align: center;
@@ -288,12 +533,25 @@ footer {
 /* 📱 Адаптивность */
 @media (max-width: 768px) {
     header {
+<<<<<<< HEAD
         flex-direction: column;
         text-align: center;
     }
 
     nav ul {
         flex-direction: column;
+=======
+        flex-direction: row;
+        text-align: center;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    nav ul {
+>>>>>>> 3a6452e (Обновление раздела Новости)
         gap: 10px;
         margin-top: 10px;
     }
@@ -317,4 +575,8 @@ footer {
     .team-grid {
         grid-template-columns: 1fr;
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 3a6452e (Обновление раздела Новости)
