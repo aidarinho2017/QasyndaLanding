@@ -1,397 +1,175 @@
-/* 🌑 Цветовая схема */
-:root {
-    --black: #121212;
-    --white: #ffffff;
-    --red: #b22222;
-    --dark-gray: #1b0f0f;
-    --light-gray: #cccccc;
-}
-
-/* 📌 Общие стили */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
-    scroll-behavior: smooth;
-}
-
 body {
-    background: var(--black);
-    color: var(--white);
+    font-family: 'Inter', sans-serif;
 }
-
-/* 🔝 Навигация */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 50px;
-    background: var(--dark-gray);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background-color: #ffffff;
 }
-
-.logo {
-    width: 120px;
+.navbar-brand img {
+    height: 40px;
 }
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+.nav-link {
+    font-weight: 500;
+    color: #007bff;
 }
-
-nav ul li a {
-    color: var(--white);
-    text-decoration: none;
-    font-size: 16px;
-    transition: color 0.3s;
+.nav-link:hover {
+    color: #0056b3 !important;
 }
-
-nav ul li a:hover {
-    color: var(--red);
-}
-
-/* 🌍 Кнопки переключения языка */
-.lang-switch {
-    display: flex;
-    gap: 10px;
-}
-
-.lang-switch button {
-    background: transparent;
-    border: 2px solid var(--red);
-    color: var(--white);
-    padding: 8px 15px;
-    font-size: 14px;
-    cursor: pointer;
-    border-radius: 20px;
-    transition: background 0.3s, color 0.3s;
-}
-
-.lang-switch button:hover {
-    background: var(--red);
-    color: var(--white);
-}
-
-/* Активный язык */
-.lang-switch button.active {
-    background: var(--red);
-    color: var(--white);
-}
-
-/* 🎭 Главный экран */
 .hero {
-    height: 100vh;
+    background-color: #e9f5ff;
+    color: #0c3057;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
     text-align: center;
-    padding: 20px;
 }
-
 .hero h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
-    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
 }
-
 .hero p {
-    font-size: 18px;
-    max-width: 600px;
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
-
-.cta {
-    background: var(--red);
-    padding: 12px 20px;
-    border: none;
-    color: var(--white);
-    font-size: 18px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.cta:hover {
-    background: #8b0000;
-    transform: scale(1.1);
-}
-
-/* ℹ️ Блок "О нас" */
 .about {
+    background-color: #ffffff;
+    color: #0c3057;
+    padding: 4rem 0;
+}
+.about h2{
+    margin-bottom: 2rem;
     text-align: center;
-    padding: 100px 50px;
-    background: var(--dark-gray);
-}
-
-.about h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 30px;
-}
-
-/* 🏆 Таблица преимуществ с анимацией */
-.about-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
 }
 
 .about-card {
-    background: var(--black);
-    padding: 20px;
+    text-align: center;
+    padding: 2rem;
     border-radius: 10px;
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-/* Активный класс для анимации */
-.about-card.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.about-card h3 {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.about-card p {
-    font-size: 16px;
-    color: var(--white);
-}
-
-/* 🛠 Виды подработки */
-.jobs {
-    text-align: center;
-    padding: 100px 50px;
-}
-
-.jobs h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 30px;
-}
-
-/* 📜 Интерактивный список */
-.job-list {
-    list-style: none;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.job-item {
-    font-size: 18px;
-    padding: 15px;
-    border-radius: 5px;
-    background: var(--dark-gray);
-    transition: transform 0.3s ease, background 0.3s ease;
-    cursor: pointer;
-}
-
-.job-item:hover {
-    transform: scale(1.05);
-    background: var(--red);
-}
-
-/* 🎭 Основатели */
-.team {
-    text-align: center;
-    padding: 100px 50px;
-    background: var(--dark-gray);
-}
-
-.team h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 30px;
-}
-
-.team-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.team-member {
-    background: var(--black);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
     transition: transform 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.about-card i {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
 }
 
+.jobs {
+    background-color: #e9f5ff;
+    color: #0c3057;
+    padding: 4rem 0;
+}
+.jobs h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.jobs ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.jobs li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #d0d0d0;
+}
+.jobs li:last-child{
+    border-bottom: none;
+}
+.team {
+    background-color: #ffffff;
+    color: #0c3057;
+    padding: 4rem 0;
+}
+.team h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
 .team-member img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     border-radius: 50%;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
+    border: 5px solid #e0f7fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-
-.team-member h3 {
-    font-size: 20px;
-    color: var(--red);
-    margin-bottom: 5px;
-}
-
-.team-member:hover {
-    transform: scale(1.05);
-}
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    background: #000;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.video-section h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 30px;
-}
-
-/* 📑 Презентация */
-.presentation-section {
-    text-align: center;
-    padding: 100px 50px;
-    background: var(--dark-gray);
-}
-
-.presentation-section h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 30px;
-}
-
-.presentation-container {
-    position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-    height: 0;
-    overflow: hidden;
-    max-width: 800px; /* Match your design */
-    margin: 0 auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background: var(--black);
-}
-
-.presentation-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
-
-/* 📱 Адаптивность */
-@media (max-width: 768px) {
-    .presentation-section {
-        padding: 80px 20px;
-    }
-
-    .presentation-container {
-        max-width: 100%;
-    }
-}
-
-
-
-
-/* 📞 Контакты */
 .contact {
+    background-color: #e9f5ff;
+    color: #0c3057;
+    padding: 4rem 0;
     text-align: center;
-    padding: 100px 50px;
 }
+.contact h2{
+    margin-bottom: 2rem;
 
-.contact h2 {
-    font-size: 36px;
-    color: var(--red);
-    margin-bottom: 20px;
 }
-
-.contact p {
-    font-size: 18px;
-    color: var(--white);
-}
-
-.contact a {
-    color: var(--white);
-    text-decoration: none;
-    transition: color 0.3s;
-    font-weight: bold;
-}
-
-.contact a:hover {
-    color: var(--red);
-}
-
-/* 🦶 Футер */
 footer {
+    background-color: #004080;
+    color: white;
+    padding: 1.5rem 0;
     text-align: center;
-    padding: 20px;
-    background: var(--dark-gray);
-    margin-top: 50px;
+}
+footer small{
+    display: block;
 }
 
-/* 📱 Адаптивность */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.lang-switch button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.lang-switch button:hover {
+    color: #0056b3;
+}
+.lang-switch button.active {
+    font-weight: bold;
+    color: #004080;
+}
+
+.news{
+    padding: 4rem 0;
+}
+.news h2{
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.news-item{
+    margin-bottom: 2rem;
+}
+.news-item img{
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 @media (max-width: 768px) {
-    header {
-        flex-direction: row;
-        text-align: center;
+    .hero h1{
+        font-size: 2.5rem;
     }
-
-    nav {
-        display: none;
-    }
-
-
-    nav ul {
-        gap: 10px;
-        margin-top: 10px;
-    }
-
-    .hero h1 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .about, .jobs, .team, .contact {
-        padding: 60px 20px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
+    .hero p{
+        font-size: 1rem;
     }
 }
